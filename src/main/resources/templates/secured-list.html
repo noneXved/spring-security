@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Product Service: Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css"
+          integrity="sha384-SI27wrMjH3ZZ89r4o+fGIJtnzkAnFs3E4qz9DIYioCQ5l9Rd/7UAa8DHcaL8jkWt" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+    <h1>Products View</h1>
+    <div class="row col-md-7 table-responsive">
+        <table class="table">
+            <thead>
+            <tr>
+                <th>No</th>
+                <th>Name</th>
+                <th>Code</th>
+                <th>Price</th>
+            </tr>
+            </thead>
+            <tr th:each="product : ${products}"
+                th:style="${productStat.odd} ? 'color: gray' : 'color: blue;'">
+                <td th:text="${productStat.index + 1}"></td>
+                <td th:text="${product.name}">
+                </td>
+                <td th:text="${product.code}">
+                </td>
+                <td th:text="${product.price}">
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+</body>
+</html>
