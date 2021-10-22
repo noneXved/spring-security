@@ -13,7 +13,7 @@ import javax.sql.DataSource;
 
 @Configuration
 @RequiredArgsConstructor
-@Order(1)
+@Order(2)
 public class ModSecurityConfiguration extends WebSecurityConfigurerAdapter {
 
     private final UserDetailsService userDetailsService;
