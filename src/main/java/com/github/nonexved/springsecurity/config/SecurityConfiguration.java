@@ -7,7 +7,7 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 
 @Configuration
-@Order(2)
+@Order(3)
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
     @Override
