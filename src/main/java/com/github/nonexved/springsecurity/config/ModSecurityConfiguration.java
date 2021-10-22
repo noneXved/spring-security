@@ -27,7 +27,7 @@ public class ModSecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .and()
                 .authorizeRequests()
                 .anyRequest()
-                .hasRole("MOD")
+                .access("hasRole('MOD') and hasRole('USER')")
                 .and()
                 .csrf().disable();
     }
