@@ -24,10 +24,10 @@ public class ModSecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .antMatchers("/secured/mod/**", "/api/secured/mod/**")
                 .and()
                 .httpBasic()
-                .and()
-                .authorizeRequests()
-                .anyRequest()
-                .access("hasRole('MOD') and hasRole('USER')")
+//                .and()
+//                .authorizeRequests()
+//                .anyRequest()
+//                .access("hasRole('MOD') and hasRole('USER')")
                 .and()
                 .csrf().disable();
     }
