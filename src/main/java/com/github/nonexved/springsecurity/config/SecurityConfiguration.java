@@ -18,7 +18,9 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
             .and()
             .formLogin()
             .and()
-            .httpBasic();
+            .httpBasic()
+            .and()
+            .oauth2Login();
     }
 
     @Override
